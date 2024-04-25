@@ -38,8 +38,7 @@ public class JnPubSubStarter {
 		JnAsyncBusinessNotifyError notifyError = new JnAsyncBusinessNotifyError();
 		JnAsyncBusinessNotifyError jnAsyncBusinessNotifyError = new JnAsyncBusinessNotifyError();
 
-		JnEntityAsyncTask asyncTask = new JnEntityAsyncTask();
-		CcpMessageReceiver topic = new CcpMessageReceiver(notifyError, asyncTask, topicName, jnAsyncBusinessNotifyError);
+		CcpMessageReceiver topic = new CcpMessageReceiver(notifyError, JnEntityAsyncTask.INSTANCE, topicName, jnAsyncBusinessNotifyError);
 		int threads = getThreads(args);
 		CcpPubSubStarter pubSubStarter = new CcpPubSubStarter(notifyError, topic, threads);
 		pubSubStarter.synchronizeMessages();
