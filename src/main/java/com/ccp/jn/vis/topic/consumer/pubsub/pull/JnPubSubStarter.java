@@ -10,6 +10,7 @@ import com.ccp.implementations.file.bucket.gcp.CcpGcpFileBucket;
 import com.ccp.implementations.http.apache.mime.CcpApacheMimeHttp;
 import com.ccp.implementations.instant.messenger.telegram.CcpTelegramInstantMessenger;
 import com.ccp.implementations.json.gson.CcpGsonJsonHandler;
+import com.ccp.implementations.text.extractor.apache.tika.CcpApacheTikaTextExtractor;
 import com.ccp.jn.async.business.support.JnAsyncBusinessNotifyError;
 import com.ccp.topic.consumer.pubsub.pull.CcpMessageReceiver;
 import com.ccp.topic.consumer.pubsub.pull.CcpPubSubStarter;
@@ -23,6 +24,7 @@ public class JnPubSubStarter {
 		(
 				new CcpElasticSearchQueryExecutor(),
 				new CcpTelegramInstantMessenger(),
+				new CcpApacheTikaTextExtractor(),
 				new CcpVisAsyncBusinessFactory(),
 				new CcpElasticSearchDbRequest(),
 				new CcpSendGridEmailSender(),
