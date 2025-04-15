@@ -13,7 +13,7 @@ import com.ccp.implementations.json.gson.CcpGsonJsonHandler;
 import com.ccp.implementations.text.extractor.apache.tika.CcpApacheTikaTextExtractor;
 import com.ccp.topic.consumer.pubsub.pull.CcpMessageReceiver;
 import com.ccp.topic.consumer.pubsub.pull.CcpPubSubStarter;
-import com.jn.business.JnBusinessNotifyError;
+import com.jn.business.commons.JnBusinessNotifyError;
 import com.jn.entities.JnEntityAsyncTask;
 public class JnPubSubStarter { 
 
